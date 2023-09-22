@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+body {
+	font-family: 'Mulish', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+header {
+	position: sticky;
+	top: 0;
+	background: #000;
+	color: white;
+    z-index: 1;
+}
+
+ul {
+	list-style-type: none;
+}
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+	gap: 30px;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 0;
+}
+
+nav ul a:hover {
+	color: lightgreen;
+}
+
+.menuBtn{
+	z-index: 100;
+	color: white;
+	background: none;
+	border: none;
+	font-size: 2.5rem;
+	display: none;
+}
+
+.active {
+	color: lightgreen;
+}
+
+main {
+	padding: 30px 0px;
+}
+
+.page-name {
+	color: gray;
+}
+
+.main-header {
+	text-align: center;
+	padding: 20px 0;
+}
+
+.main-header h1 {
+	margin-bottom: 30px;
+}
+
+.flex {
+	display: grid;
+	gap: 30px;
+	grid-template-columns: 1fr 1fr;
+}
+
+.flex .video-cont video {
+	width: 100%;
+}
+
+.video-cont h2 {
+	margin-bottom: 20px;
+}
+
+.get-quote-section {
+	padding: 30px 0;
+	display: grid;
+	grid-template-columns: 2fr 3fr;
+	align-items: center;
+	gap: 30px;
+}
+
+.get-quote-section .info h2 {
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+.info p {
+	color: gray;
+	margin-bottom: 20px;
+	font-size: 25px;
+}
+
+.get-btn {
+	border: none;
+	font-size: 1.2rem;
+	padding: 10px 20px;
+	background: lightgreen;
+	border-radius: 10px;
+	cursor: pointer;
+    margin: 0 auto;
+    display: block;
+}
+
+.get-quote-section .info {
+	width: 100%;
+}
+
+.get-quote-section img {
+	width: 100%;
+}
+
+.card {
+	border: 1px solid gray;
+	border-radius: 10px;
+	padding: 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+    cursor: pointer;
+}
+
+.all-plans {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.card h3 {
+	font-size: 25px;
+}
+
+.card p {
+	font-size: 20px;
+	color: lightgreen;
+}
+
+section h2{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+footer{
+	text-align: center;
+	padding: 30px 0;
+	color: gray;
+}
+
+@media (width < 900px) {
+	.flex {
+		grid-template-columns: 1fr;
+	}
+
+	.get-quote-section {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (width < 770px) {
+	nav ul {
+		display: none;
+	}
+	nav.open ul {
+		flex-direction: column;
+		position: fixed;
+		background: #000;
+		right: 0;
+		top: 0px;
+		padding: 50px;
+		padding-top: 100px;
+		display: flex;
+	}
+
+	.menuBtn{
+		display: inline;
+	}
+
+	.all-plans{
+		grid-template-columns: 1fr 1fr;
+		width: 100%;
+	}
+}
+
+@media (width < 575px) {
+	.all-plans{
+		grid-template-columns: 1fr;
+	}
+}
